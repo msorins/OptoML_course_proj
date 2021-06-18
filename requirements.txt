@@ -1,0 +1,15 @@
+## Python version
+python 3.7.10
+
+## Built in python packages:
+math
+
+## The required libraries for running the training and evaluating are:
+numpy>=1.19.5
+pandas>=1.1.5
+sklearn>=0.22.2
+TensorFlow>=2.5.0
+
+## For plotting the following libraries were used:
+matplotlib
+seaborn
