@@ -21,7 +21,7 @@ def estimate_gradient(w, x, y, m, loss):
     grad_est = (loss_u - loss_w) * u / m
     return grad_est, loss_w 
 
-def random_search(epochs, X_train, y_train, X_valid, y_valid, gamma, m, loss):
+def random_search(epochs, X_train, y_train, X_valid, y_valid, gamma, m, loss, verbose=True):
     """
     Run random search using gradient oracle 
     """
@@ -41,7 +41,7 @@ def random_search(epochs, X_train, y_train, X_valid, y_valid, gamma, m, loss):
         losses.append(loss_w)
         valid_losses.append(valid_loss)
         
-        if e%10==0:
+        if (e%10==0 and verbose):
             print('loss_w = {}'.format(loss_w))
             print('valid_loss = {}'.format(valid_loss))
             
